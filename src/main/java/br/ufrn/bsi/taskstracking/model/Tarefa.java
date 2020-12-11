@@ -26,17 +26,17 @@ public class Tarefa {
     private String descricao;
 
     @Column(nullable = false)
-    private LocalDateTime criada_em;
+    private LocalDateTime dataCriacao;
 
     @Column(nullable = true)
-    private LocalDateTime fechada_em;
+    private LocalDateTime dataFechamento;
 
     private Tarefa() {}
 
     public Tarefa(String identificador, String nome) {
         this.identificador = identificador;
         this.nome = nome;
-        this.criada_em = LocalDateTime.now();
+        this.dataCriacao = LocalDateTime.now();
     }
 
     public long getId() {
@@ -72,20 +72,20 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getCriada_em() {
-        return criada_em;
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
     }
 
-    public void setCriada_em(LocalDateTime criada_em) {
-        this.criada_em = criada_em;
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
     }
 
-    public LocalDateTime getFechada_em() {
-        return fechada_em;
+    public LocalDateTime getDataFechamento() {
+        return dataFechamento;
     }
 
-    public void setFechada_em(LocalDateTime fechada_em) {
-        this.fechada_em = fechada_em;
+    public void setDataFechamento(LocalDateTime dataFechamento) {
+        this.dataFechamento = dataFechamento;
     }
 
     @Override

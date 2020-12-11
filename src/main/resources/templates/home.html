@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Tasks Tracking Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <h1>Minhas Tarefas</h1>
+    <div th:each="tarefa : ${tarefas}">
+        <p th:text="${tarefa.id} + ' - ' + ${tarefa}" />
+    </div>
+
+</body>
+
+</html>
